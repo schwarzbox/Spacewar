@@ -1,20 +1,20 @@
 # Spacewar-Python3
 
-Spacewar!(PDP-1)
+Script Spacewar!
 
-Remake of the space combat video game developed in 1962 by Steve Russell
+Remake of the space combat video game developed in 1962 by Steve Russell.
 
 1.0 (2018 - two players, no AI, random asteroids, particle system, gravity)
 
 2.0 (2018 - add ship inertion after launch torpeda, add planet, simple AI)
 
-# Gameplay.
+# Gameplay
 
-Use torpedoes to destroy enemy spaceship. Avoid the gravity well of a sun. Asteroids can't destroy spaceships. Hyperjump may chance to destroy spaceship.
+Use torpedoes to destroy enemy spaceship. Avoid the gravity well near sun. Asteroids can't destroy spaceships. Hyperjump may chance to destroy spaceship.
 
-# Controls.
+# Controls
 
-Player 1:
+Player 1
 
 W - forward
 
@@ -26,7 +26,7 @@ S - launch torpeda
 
 E - hyperjump
 
-Player 2:
+Player 2
 
 I - forward
 
