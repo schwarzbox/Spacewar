@@ -4,7 +4,7 @@
 # (c) Alexander Veledzimovich
 
 """
-Settings for 0_spacewar.py
+Setting for 0_spacewar.py
 """
 
 __version__ = 0.1
@@ -85,6 +85,7 @@ class Setting():
 
     def reset_dynamic_settings(self):
         pass
+
 
 if __name__ == '__main__':
     print(__version__)

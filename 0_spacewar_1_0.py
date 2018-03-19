@@ -8,32 +8,33 @@ SPACE WAR
 
 __version__ = 1.0
 
+# 0_spacewar_1_0.py
+
+# MIT License
+# Copyright (c) 2018 Alexander Veledzimovich veledz@gmail.com
+
+# Permission is hereby granted, free of charge, to any person obtaining a
+# copy of this software and associated documentation files (the "Software"),
+# to deal in the Software without restriction, including without limitation
+# the rights to use, copy, modify, merge, publish, distribute, sublicense,
+# and/or sell copies of the Software, and to permit persons to whom the
+# Software is furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+# DEALINGS IN THE SOFTWARE.
+
+
 # 1.0 (2018 - two players, no AI, random asteroids, particle system, gravity)
 
 # 2.0 (2018 - add ship inertion after launch torpeda, add planet, simple AI)
-
-#
-#  0_spacewar.py
-#
-#  Copyright (c) 2018 Alexander Veledzimovich veledz@gmail.com
-#
-#  This program is free software; you can redistribute it and/or modify
-#  it under the terms pip3of the GNU General Public License as published by
-#  the Free Software Foundation; either version 2 of the License, or
-#  (at your option) any later version.
-#
-#  This program is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
-#
-#  You should have received a copy of the GNU General Public License
-#  along with this program; if not, write to the Free Software
-#  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
-#  MA 02110-1301, USA.
-#
-#
-
 
 import pygame
 
@@ -62,7 +63,8 @@ class Main(object):
         self.CLOCK = pygame.time.Clock()
         self.DISPLAY = pygame.display.set_mode((WID,
                                                 HEI), 0, 32)
-        self.DISPLAY.convert_alpha()
+
+        self.DISPLAY.set_alpha(0, pygame.RLEACCEL)
 
         # set up icon
         icon_sq = pygame.Surface((128, 128)).convert_alpha()
@@ -73,7 +75,7 @@ class Main(object):
         pygame.display.set_icon(icon_sq)
 
         self.caption = 'spacewar!'
-        pygame.display.set_caption(self.caption)
+        pygame.display.set_caption(f'{self.caption} {__version__}')
 
         pygame.mouse.set_visible(True)
         self.game()
