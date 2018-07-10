@@ -34,6 +34,7 @@ class Setting():
 
         self.EMPTY = (255, 255, 255, 0)
 
+        self.APPNAME = 'Spacewar!'
         self.TITLEFNT = ('fonts/pdp1.ttf', 80)
         self.LABFNT = ('fonts/pdp1.ttf', 20)
         self.BGCLR = self.BLACKBLUE

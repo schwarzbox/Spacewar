@@ -88,6 +88,7 @@ class UserInput():
         pygame.quit()
         sys_exit()
 
+
 if __name__ == '__main__':
     print(__version__)
     print(__doc__)

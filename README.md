@@ -1,12 +1,8 @@
 # Spacewar-Python3
 
-Script Spacewar!
-
 Remake of the space combat video game developed in 1962 by Steve Russell.
 
 1.0 (2018 - two players, no AI, random asteroids, particle system, gravity)
-
-2.0 (2018 - add ship inertion after launch torpeda, add planet, simple AI)
 
 # Gameplay
 

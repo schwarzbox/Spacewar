@@ -72,13 +72,18 @@ class SpaceShip(Sprite):
         dely = self.dely + siny * self.speed
 
         # correct diagonal movement
-        temp_speedx = MAXSPEED - (abs(delx * siny))
-        temp_speedy = MAXSPEED - (abs(dely * cosx))
-
-        if abs(self.delx + delx) < abs(temp_speedx):
+        if abs(delx) + abs(dely) < MAXSPEED:
             self.delx = delx
-        if abs(self.dely + dely) < abs(temp_speedy):
             self.dely = dely
+
+        # print(abs(delx) + abs(dely))
+        # temp_speedx = MAXSPEED - (abs(delx * siny))
+        # temp_speedy = MAXSPEED - (abs(dely * cosx))
+
+        # if abs(self.delx + delx) < abs(temp_speedx):
+        #     self.delx = delx
+        # if abs(self.dely + dely) < abs(temp_speedy):
+        #     self.dely = dely
 
     def count_sin_cos(self):
         angle_rad = self.angle * pi / 180
@@ -207,8 +212,7 @@ class Torpeda(SpaceShip):
         [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
         [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
-        [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+        [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 
     def __init__(self, set_si, DISPLAY, game_obj, x, y, angle,
                  delx, dely, owner):
@@ -302,9 +306,7 @@ class Needle(SpaceShip):
         [0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-
-    ]
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 
     def __init__(self, set_si, DISPLAY, game_obj, name):
         super().__init__(set_si, DISPLAY, game_obj, name)
@@ -364,14 +366,13 @@ class Wedge(SpaceShip):
         [0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-
-    ]
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 
     def __init__(self, set_si, DISPLAY, game_obj, name):
         super().__init__(set_si, DISPLAY, game_obj, name)
         self.ship.add(self)
         self.game_obj.append(self)
+
 
 if __name__ == '__main__':
     print(__version__)

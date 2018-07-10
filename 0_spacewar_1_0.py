@@ -71,10 +71,10 @@ class Main(object):
         icon_sq.fill(set_si.EMPTY)
         gui.Label(set_si, icon_sq.get_size()[0] // 2,
                   icon_sq.get_size()[1] // 2, 'center', icon_sq,
-                  set_si.TITLEFNT, 'SW', fg=set_si.BGCLR).draw()
+                  set_si.TITLEFNT, 'SW!', fg=set_si.LIGHTCYAN).draw()
         pygame.display.set_icon(icon_sq)
 
-        self.caption = 'spacewar!'
+        self.caption = set_si.APPNAME
         pygame.display.set_caption(f'{self.caption} {__version__}')
 
         pygame.mouse.set_visible(True)
@@ -113,7 +113,7 @@ class Main(object):
     def start_screen(self):
         run_scr = True
         menu = gui.SimpleInfo(set_si, self.DISPLAY,
-                              title_txt='SPACEWAR!',
+                              title_txt=set_si.APPNAME.upper(),
                               menu_items=[(Needle, ' W. A. S. D. E'),
                                           (Wedge, ' I. J. K. L. O')])
         # make circle screen
