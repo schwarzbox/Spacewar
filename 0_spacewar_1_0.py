@@ -34,10 +34,8 @@ __version__ = 1.0
 
 # 1.0 (2018 - two players, no AI, random asteroids, particle system, gravity)
 
-# 2.0 (2018 - add ship inertion after launch torpeda, add planet, simple AI)
-
 import pygame
-
+from pygame.locals import *
 import gui
 
 from controller import UserInput as UINP
@@ -62,7 +60,7 @@ class Main(object):
 
         self.CLOCK = pygame.time.Clock()
         self.DISPLAY = pygame.display.set_mode((WID,
-                                                HEI), 0, 32)
+                                                HEI), FULLSCREEN, 32)
 
         self.DISPLAY.set_alpha(0, pygame.RLEACCEL)
 
