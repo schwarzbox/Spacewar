@@ -1,14 +1,23 @@
-# Spacewar-Python3
+# Spacewar
+
+v1.0
 
 Remake of the space combat video game developed in 1962 by Steve Russell.
 
-1.0 (2018 - two players, no AI, random asteroids, particle system, gravity)
+## Intall
 
-# Gameplay
+```bash
+pip3 install pygame
+chmod 744 0_spacewar_1_0.py
+./0_spacewar_1_0.py
+
+```
+
+## Gameplay
 
 Use torpedoes to destroy enemy spaceship. Avoid the gravity well near sun. Asteroids can't destroy spaceships. Hyperjump may chance to destroy spaceship.
 
-# Controls
+## Controls
 
 Player 1
 

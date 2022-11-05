@@ -31,9 +31,6 @@ __version__ = 1.0
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 
-
-# 1.0 (2018 - two players, no AI, random asteroids, particle system, gravity)
-
 import pygame
 from pygame.locals import *
 import gui
@@ -60,7 +57,7 @@ class Main(object):
 
         self.CLOCK = pygame.time.Clock()
         self.DISPLAY = pygame.display.set_mode((WID,
-                                                HEI), FULLSCREEN, 32)
+                                                HEI), False, 32)
 
         self.DISPLAY.set_alpha(0, pygame.RLEACCEL)
 
@@ -190,7 +187,7 @@ class Main(object):
                     (not Needle.ship.sprite.fuel and
                      not Wedge.ship.sprite.fuel) or
                     (not Needle.ship.sprite.torpedos and
-                     not Wedge.ship.sprite.torpedos)):
+                        not Wedge.ship.sprite.torpedos)):
 
                 final_pause -= 1
             if not final_pause:
